@@ -1,0 +1,42 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/amazing" autocomplete="on" method="post">
+    <input type="hidden" name="_id" value="{{amazing._id}}">  <!--Memberikan Initial tiap Document Pada Collection Yaitu ID...-->
+    <div class="form-group">
+        <label> Kode Produk </label>
+        <input type="text" class="form-control" name="code_product" placeholder="Masukkan Kode Produk" value="{{amazing.code_product}}">
+        <div class="text-danger">
+            {{amazing.code_productError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label> Nama Toko </label>
+        <input type="text" class="form-control" name="name_store" placeholder="Masukkan Nama Toko" value="{{amazing.name_store}}">
+        <div class="text-danger">
+            {{amazing.name_storeError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label> Nama Produk </label>
+        <input type="text" class="form-control" name="name_product" placeholder="Masukkan Nama Produk" value="{{amazing.name_product}}">
+        <div class="text-danger">
+            {{amazing.name_productError}}
+        </div>
+    </div>
+    <div class="form-group">
+        <label> Harga </label>
+        <input type="text" class="form-control" name="price" placeholder="Masukkan Harga Produk" value="{{amazing.price}}">
+        <div class="text-danger">
+            {{amazing.priceError}}
+        </div>
+    </div>
+
+
+    <div class="form-group">
+
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> SUBMIT </button>
+        <a class="btn btn-secondary" href="/amazing/list"><i class="fa fa-list"></i> View All </a>
+
+    </div>
+
+</form>

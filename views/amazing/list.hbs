@@ -1,0 +1,29 @@
+<h3> Amazing List </h3>
+
+<h3><a class="btn btn-secondary" href="/amazing"><i class="fa fa-plus"></i> Create New</a> </h3>
+<br>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th> Kode Produk </th>
+        <th> Nama Toko </th>
+        <th> Nama Produk </th>
+        <th> Harga </th>
+        <th> Option </th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each list}}
+        <tr>
+            <td>{{this.code_product}}</td>
+            <td>{{this.name_store}}</td>
+            <td>{{this.name_product}}</td>
+            <td>{{this.price}}</td>
+            <td>
+                <a href="/amazing/{{this._id}}"><i class="fa fa-pencil " aria-hidden="true"></i> </a>
+                <a href="/amazing/delete/{{this._id}}" onclick="return confirm('Are You Sure To Delete The Data ?');"><i class="fa fa-trash" aria-hidden="true"></i></a>
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
